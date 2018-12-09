@@ -16,7 +16,7 @@ namespace GeoTetra.GTBuilder.Gizmo
 #if UNITY_EDITOR
         private static GizmoSelection _instance;
 
-        private const int SelectionRange = 64;
+        private const int SelectionRange = 32;
         private const string PositionHandleName = "gizmo_selection_position_handle";
         private readonly string[] PositionHandleAxisNames = {"xAxis", "yAxis", "zAxis"};
         private readonly List<SeralizedSelectablePoint> SelectablePoints = new List<SeralizedSelectablePoint>();

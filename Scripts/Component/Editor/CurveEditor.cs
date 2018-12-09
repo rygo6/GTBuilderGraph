@@ -34,6 +34,7 @@ namespace GeoTetra.GTBuilder.Component
                 {
                     leftHandlePosition.vector3Value += p.DeltaPosition;
                     rightHandlePosition.vector3Value += p.DeltaPosition;
+                    _curve.OnChange();
                 }));
                 if (_curve.Primitive.Function == CurveFunction.CubicBezier)
                 {
@@ -41,11 +42,13 @@ namespace GeoTetra.GTBuilder.Component
                     {
                         Vector3 delta = leftHandlePosition.vector3Value - position.vector3Value;
                         rightHandlePosition.vector3Value = position.vector3Value - delta;
+                        _curve.OnChange();
                     }));
                     GizmoSelection.Instance.AddSelectablePoint(new SeralizedSelectablePoint(rightHandlePosition, Color.blue, (p) =>
                     {
                         Vector3 delta = position.vector3Value - rightHandlePosition.vector3Value;
                         leftHandlePosition.vector3Value = position.vector3Value + delta;
+                        _curve.OnChange();
                     }));
                 }
             }
@@ -82,20 +85,6 @@ namespace GeoTetra.GTBuilder.Component
             {
                 Tools.hidden = false;
             }
-            
-//            EditorGUI.BeginChangeCheck();
-//            BuilderGraphUtility.SelectedBuilderGraph.SelectedNode.OnSceneGUISelected();
-//            if (EditorGUI.EndChangeCheck())
-//            {
-//                BuilderGraphUtility.SelectedBuilderGraph.SelectedNode.OnChangeOccured();
-//            }
-
-            //consumes events to the point that window navigation does not work
-            //if (Event.current.type != EventType.layout &&
-            //    Event.current.type != EventType.repaint)
-            //{
-            //    //Event.current.Use();
-            //}
 
 
             serializedObject.Update();
@@ -137,6 +126,8 @@ namespace GeoTetra.GTBuilder.Component
             _curve.Primitive.DrawEditorLine(4, Color.white);
 
             serializedObject.ApplyModifiedProperties();
+            
+            GizmoSelection.Instance.RenderGizmos();
         }
     }
 }

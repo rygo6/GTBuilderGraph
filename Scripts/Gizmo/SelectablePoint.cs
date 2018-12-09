@@ -13,37 +13,40 @@ namespace GeoTetra.GTBuilder.Gizmo
     {
 #if UNITY_EDITOR
         public readonly Color PointColor;
-        private readonly SerializedProperty SerializeProperty;
-        private readonly Action<SeralizedSelectablePoint> onMoved;
+        private readonly SerializedProperty _serializeProperty;
+        private readonly Action<SeralizedSelectablePoint> _moved;
         
         public bool Selected { get; set; }
         public Vector3 DeltaPosition { get; private set; }
 
         public Vector3 GetPosition()
         {
-            return SerializeProperty.vector3Value;
+            return _serializeProperty.vector3Value;
         }
 
         public void Translate(Vector3 translation)
         {
-            DeltaPosition = translation;
-            SerializeProperty.vector3Value += translation;
-            onMoved(this);
+            if (translation.sqrMagnitude > 0)
+            {
+                DeltaPosition = translation;
+                _serializeProperty.vector3Value += translation;
+                _moved(this);
+            }
         }
 
         public void SetPosition(Vector3 position)
         {
-            DeltaPosition = position - SerializeProperty.vector3Value;
-            SerializeProperty.vector3Value = position;
-            onMoved(this);        
+            DeltaPosition = position - _serializeProperty.vector3Value;
+            _serializeProperty.vector3Value = position;
+            _moved(this);        
         }
 
-        public SeralizedSelectablePoint(SerializedProperty serializedProperty, Color color, Action<SeralizedSelectablePoint> onMoved)
+        public SeralizedSelectablePoint(SerializedProperty serializedProperty, Color color, Action<SeralizedSelectablePoint> moved)
         {
             PointColor = color;
             Selected = false;
-            SerializeProperty = serializedProperty;
-            this.onMoved = onMoved;
+            _serializeProperty = serializedProperty;
+            _moved = moved;
         }
 
 //        public void SetSelectedAfterRangeTest(float range)

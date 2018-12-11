@@ -17,8 +17,8 @@ namespace GeoTetra.GTBuilderGraph
         [CurveInput]
         public void CurveInput(Curve value)
         {
-            Debug.Log("Vector1InputLogicNode Vector1Input " + value);
-            if (CurvePrimitiveOutput != null) CurvePrimitiveOutput(value.Primitive);
+            Debug.Log("Vector1InputLogicNode Vector1Input " + value + " " + this.NodeGuid);
+            if (CurvePrimitiveOutput != null && value != null) CurvePrimitiveOutput(value.Primitive);
         }
     }
 }

@@ -17,7 +17,7 @@ namespace GeoTetra.GTBuilderGraph
         [NodePort]
         public void CurvePrimitiveInput(CurvePrimitive value)
         {
-            Debug.Log("CurvePrimitiveInput CurvePrimitiveInput " + value);
+            Debug.Log("CurvePrimitiveOutput CurvePrimitiveInput " + value);
             if (CurvePrimitiveOutput != null) CurvePrimitiveOutput(value);
         }
     }

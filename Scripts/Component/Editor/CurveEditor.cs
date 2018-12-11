@@ -32,6 +32,7 @@ namespace GeoTetra.GTBuilder.Component
                 
                 GizmoSelection.Instance.AddSelectablePoint(new SeralizedSelectablePoint(position, Color.white, (p) =>
                 {
+                    Debug.Log("move point");
                     leftHandlePosition.vector3Value += p.DeltaPosition;
                     rightHandlePosition.vector3Value += p.DeltaPosition;
                     _curve.OnChange();
@@ -40,12 +41,14 @@ namespace GeoTetra.GTBuilder.Component
                 {
                     GizmoSelection.Instance.AddSelectablePoint(new SeralizedSelectablePoint(leftHandlePosition, Color.red, (p) =>
                     {
+                        Debug.Log("move red handle");
                         Vector3 delta = leftHandlePosition.vector3Value - position.vector3Value;
                         rightHandlePosition.vector3Value = position.vector3Value - delta;
                         _curve.OnChange();
                     }));
                     GizmoSelection.Instance.AddSelectablePoint(new SeralizedSelectablePoint(rightHandlePosition, Color.blue, (p) =>
                     {
+                        Debug.Log("move blue handle");
                         Vector3 delta = position.vector3Value - rightHandlePosition.vector3Value;
                         leftHandlePosition.vector3Value = position.vector3Value + delta;
                         _curve.OnChange();

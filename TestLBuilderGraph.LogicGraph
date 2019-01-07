@@ -9,6 +9,10 @@
         {
             "NodeType": "CurveOutputLogicNode",
             "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":195.0526885986328,\"y\":319.7585144042969,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"df7e82b2-270d-4b3d-9e4c-969f0d7038f8\"}"
+        },
+        {
+            "NodeType": "MeshOutputLogicNode",
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":297.5,\"y\":606.0,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"e9151d3a-1dc7-4398-bbac-9083599f9e0d\"}"
         }
     ],
     "_serializedNodes": [

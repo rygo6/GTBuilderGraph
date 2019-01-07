@@ -9,7 +9,7 @@ namespace GeoTetra.GTBuilderGraph
     {        
         public override void ConstructNode()
         {
-            AddSlot(new CurvePrimitivePortDescription(this, "CurvePrimitiveInput", "Out", PortDirection.Input));
+            AddSlot(new CurvePrimitivePortDescription(this, "CurvePrimitiveInput", "In", PortDirection.Input));
         }
     }
 }

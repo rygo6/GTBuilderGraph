@@ -51,5 +51,16 @@ namespace GeoTetra.GTBuilder.Component
             Debug.Log("SetCurvePrimitive");
             _curvePrimitive = value.ObjectValue as CurvePrimitive;
         }
+
+        private void OnDrawGizmosSelected()
+        {
+            Primitive.DrawEditorLine(4, Color.white);
+            GizmoSelection.Instance.RenderGizmos();
+        }
+        
+        private void OnDrawGizmos()
+        {
+            Primitive.DrawEditorLine(2, Color.gray);
+        }
     }
 }

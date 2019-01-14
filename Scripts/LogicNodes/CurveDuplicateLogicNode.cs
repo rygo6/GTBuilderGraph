@@ -20,10 +20,10 @@ namespace GeoTetra.GTBuilderGraph
 
         private readonly List<CurveHandle> _offsets = new List<CurveHandle>();
         
-        [NodePort]
+        [LogicNodePort]
         public event Action<CurvePrimitive> CurvePrimitiveOutput;
        
-        [NodePort]
+        [LogicNodePort]
         public void CurvePrimitiveInput(CurvePrimitive value)
         {
             _primitive = value;
@@ -50,7 +50,7 @@ namespace GeoTetra.GTBuilderGraph
 
             CreateDuplicateCurve();
             
-            Debug.Log("CurvePrimitiveInput CurvePrimitiveInput " + value + " offset " + _globalOffset);
+//            Debug.Log("CurvePrimitiveInput CurvePrimitiveInput " + value + " offset " + _globalOffset);
             CurvePrimitiveOutput?.Invoke(_duplicatePrimitive);
         }
         

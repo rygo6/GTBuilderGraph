@@ -11,7 +11,7 @@ namespace GeoTetra.GTBuilderGraph
 {
     public class CurveInputLogicNode : LogicNode
     {
-        [NodePort]
+        [LogicNodePort]
         public event Action<CurvePrimitive> CurvePrimitiveOutput;
        
         [CurveInput]

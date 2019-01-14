@@ -28,7 +28,7 @@ namespace GeoTetra.GTBuilder
         }
 
         //http://stackoverflow.com/questions/4089443/find-the-tangent-of-a-point-on-a-cubic-bezier-curve-on-an-iphone
-        float Point(float a, float b, float c, float d, float t)
+        private float Point(float a, float b, float c, float d, float t)
         {
             float C1 = (d - (3f * c) + (3f * b) - a);
             float C2 = ((3f * c) - (6f * b) + (3f * a));
@@ -37,7 +37,7 @@ namespace GeoTetra.GTBuilder
             return (C1 * t * t * t + C2 * t * t + C3 * t + C4);
         }
 
-        float Tangent(float a, float b, float c, float d, float t)
+        private float Tangent(float a, float b, float c, float d, float t)
         {
             float C1 = (d - (3f * c) + (3f * b) - a);
             float C2 = ((3f * c) - (6f * b) + (3f * a));

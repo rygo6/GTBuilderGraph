@@ -21,34 +21,13 @@ namespace GeoTetra.GTBuilder.Component
 
         public void OnChange()
         {
-            Debug.Log("OnChange Curve");
-            if (Changed != null) Changed(this);
-        }
-
-        public void HookUpChangedEvent(GraphInput input)
-        {
-            
-        }
-
-        private bool IsEventHandlerRegistered(Delegate prospectiveHandler)
-        {
-            if (Changed != null)
-            {
-                foreach (Delegate existingHandler in Changed.GetInvocationList())
-                {
-                    if (existingHandler == prospectiveHandler)
-                    {
-                        return true;
-                    }
-                }
-            }
-
-            return false;
+//            Debug.Log("OnChange Curve");
+            Changed?.Invoke(this);
         }
 
         public void SetCurvePrimitive(ObjectEvent value)
         {
-            Debug.Log("SetCurvePrimitive");
+//            Debug.Log("SetCurvePrimitive");
             _curvePrimitive = value.ObjectValue as CurvePrimitive;
         }
 

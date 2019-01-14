@@ -2,23 +2,19 @@
     "_serializedInputNodes": [
         {
             "NodeType": "CurveInputLogicNode",
-            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-504.1526184082031,\"y\":327.2195129394531,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"925a2e63-70f9-4019-b0a4-c2d4a5c4eebc\"}"
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-614.7125854492188,\"y\":314.2195129394531,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"925a2e63-70f9-4019-b0a4-c2d4a5c4eebc\"}"
         }
     ],
     "_serializedOutputNodes": [
         {
             "NodeType": "CurveOutputLogicNode",
             "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":195.0526885986328,\"y\":319.7585144042969,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"df7e82b2-270d-4b3d-9e4c-969f0d7038f8\"}"
-        },
-        {
-            "NodeType": "MeshOutputLogicNode",
-            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":297.5,\"y\":606.0,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"e9151d3a-1dc7-4398-bbac-9083599f9e0d\"}"
         }
     ],
     "_serializedNodes": [
         {
             "NodeType": "CurveDuplicateLogicNode",
-            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-159.87925720214845,\"y\":462.583984375,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"c808513c-e0ba-47fa-973f-9d98e429ac34\",\"_globalOffset\":{\"x\":0.0,\"y\":4.0,\"z\":0.0}}"
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-212.8792724609375,\"y\":438.583984375,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"c808513c-e0ba-47fa-973f-9d98e429ac34\",\"_globalOffset\":{\"x\":0.0,\"y\":4.0,\"z\":0.0}}"
         }
     ],
     "_serializedEdges": [

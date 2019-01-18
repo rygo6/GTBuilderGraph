@@ -12,7 +12,8 @@ namespace GeoTetra.GTBuilderGraph
 {
     public class CurveConvertLogicNode : LogicNode
     {
-        [SerializeField] private float _spacing = 1;
+        [SerializeField] 
+        private float _spacing;
 
         [LogicNodePort] public event Action<List<Vertex>> VertexListOutput;
 
@@ -23,6 +24,7 @@ namespace GeoTetra.GTBuilderGraph
         [LogicNodePort]
         public void CurvePrimitiveInput(CurvePrimitive primitive)
         {
+            Debug.Log($"SPACING {_spacing}");
             _primitive = primitive;
             Process();
         }

@@ -22,7 +22,7 @@
     "_serializedNodes": [
         {
             "NodeType": "CurveConvertLogicNode",
-            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-120.5,\"y\":310.0,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"389b8d58-6784-4bb0-94df-e6040859baf1\",\"_spacing\":0.20000000298023225}"
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-120.5,\"y\":310.0,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"389b8d58-6784-4bb0-94df-e6040859baf1\",\"_spacing\":0.4000000059604645}"
         },
         {
             "NodeType": "CurveConvertLogicNode",

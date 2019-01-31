@@ -7,7 +7,7 @@ namespace GeoTetra.GTBuilderGraph
 {
     [Title("Curve", "Duplicate")]
     [NodeEditorType(typeof(CurveDuplicateLogicNode))]
-    public class CurveDuplicateNodeEditor : NodeEditor
+    public class CurveDuplicateLogicNodeEditor : LogicNodeEditor
     {        
         [SerializeField]
         private Vector3 _globalOffset;
@@ -25,8 +25,8 @@ namespace GeoTetra.GTBuilderGraph
         
         public override void ConstructNode()
         {
-            AddSlot(new CurvePrimitivePortDescription(this, "CurvePrimitiveInput", "In", PortDirection.Input));
-            AddSlot(new CurvePrimitivePortDescription(this, "CurvePrimitiveOutput", "Out", PortDirection.Output));
+            AddPort(new CurvePrimitivePortDescription(this, "CurvePrimitiveInput", "In", PortDirection.Input));
+            AddPort(new CurvePrimitivePortDescription(this, "CurvePrimitiveOutput", "Out", PortDirection.Output));
         }
     }
 }

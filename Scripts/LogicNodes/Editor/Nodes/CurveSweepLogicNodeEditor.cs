@@ -8,7 +8,7 @@ namespace GeoTetra.GTBuilderGraph
 {
     [Title("Curve", "Sweep")]
     [NodeEditorType(typeof(CurveSweepLogicNode))]
-    public class CurveSweepNodeEditor : NodeEditor
+    public class CurveSweepLogicNodeEditor : LogicNodeEditor
     {        
         [SerializeField]
         private bool _flipNormals;
@@ -90,9 +90,9 @@ namespace GeoTetra.GTBuilderGraph
         
         public override void ConstructNode()
         {
-            AddSlot(new VertexListPortDescription(this, "PathVerticesInput", "In Path", PortDirection.Input));
-            AddSlot(new VertexListPortDescription(this, "RailVerticesInput", "In Rail", PortDirection.Input));
-            AddSlot(new MeshPortDescription(this, "MeshOutput", "Out", PortDirection.Output));
+            AddPort(new VertexListPortDescription(this, "PathVerticesInput", "In Path", PortDirection.Input));
+            AddPort(new VertexListPortDescription(this, "RailVerticesInput", "In Rail", PortDirection.Input));
+            AddPort(new MeshPortDescription(this, "MeshOutput", "Out", PortDirection.Output));
         }
     }
 }

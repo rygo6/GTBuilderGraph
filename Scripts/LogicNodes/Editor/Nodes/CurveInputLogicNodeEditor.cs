@@ -5,11 +5,11 @@ namespace GeoTetra.GTBuilderGraph
 {
     [Title("Input", "Curve")]
     [NodeEditorType(typeof(CurveInputLogicNode))]
-    public class CurveInputNodeEditor : NodeEditor, IInputNode
+    public class CurveInputLogicNodeEditor : LogicNodeEditor, IInputNode
     {        
         public override void ConstructNode()
         {
-            AddSlot(new CurvePrimitivePortDescription(this, "CurvePrimitiveOutput", "Out", PortDirection.Output));
+            AddPort(new CurvePrimitivePortDescription(this, "CurvePrimitiveOutput", "Out", PortDirection.Output));
         }
     }
 }

@@ -7,7 +7,7 @@ namespace GeoTetra.GTLogicGraph.Slots
     {
         public override PortValueType ValueType { get { return PortValueType.VertexList; } }
 
-        public VertexListPortDescription(NodeEditor owner, string memberName, string displayName, PortDirection portDirection) 
+        public VertexListPortDescription(LogicNodeEditor owner, string memberName, string displayName, PortDirection portDirection) 
             : base(owner, memberName, displayName, portDirection)
         {
         }

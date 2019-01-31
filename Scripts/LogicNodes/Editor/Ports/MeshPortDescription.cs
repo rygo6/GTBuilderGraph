@@ -7,7 +7,7 @@ namespace GeoTetra.GTLogicGraph.Slots
     {
         public override PortValueType ValueType { get { return PortValueType.Mesh; } }
 
-        public MeshPortDescription(NodeEditor owner, string memberName, string displayName, PortDirection portDirection) 
+        public MeshPortDescription(LogicNodeEditor owner, string memberName, string displayName, PortDirection portDirection) 
             : base(owner, memberName, displayName, portDirection)
         {
         }

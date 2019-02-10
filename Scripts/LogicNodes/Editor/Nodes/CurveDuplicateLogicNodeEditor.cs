@@ -1,6 +1,6 @@
 ﻿using GeoTetra.GTBuilder.Nodes;
 using GeoTetra.GTLogicGraph;
-using GeoTetra.GTLogicGraph.Slots;
+using GeoTetra.GTLogicGraph.Ports;
 using UnityEngine;
 
 namespace GeoTetra.GTBuilderGraph
@@ -12,20 +12,16 @@ namespace GeoTetra.GTBuilderGraph
         [SerializeField]
         private Vector3 _globalOffset;
         
-        [VectorControlAttribute("Global Offset")]
-        public Vector3 GlobalOffset
-        {
-            get { return _globalOffset; }
-            set
-            {
-                _globalOffset = value;
-                SetDirty();
-            }
-        }
-        
         public override void ConstructNode()
         {
             AddPort(new CurvePrimitivePortDescription(this, "CurvePrimitiveInput", "In", PortDirection.Input));
+            AddPort(new Vector3PortDescription(
+                this, 
+                "GlobalOffset", 
+                "Global Offset", 
+                PortDirection.Input,
+                () => _globalOffset,
+                (newValue) => _globalOffset = newValue));
             AddPort(new CurvePrimitivePortDescription(this, "CurvePrimitiveOutput", "Out", PortDirection.Output));
         }
     }

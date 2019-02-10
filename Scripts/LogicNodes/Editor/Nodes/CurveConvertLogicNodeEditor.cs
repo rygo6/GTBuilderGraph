@@ -1,6 +1,6 @@
 ﻿using GeoTetra.GTBuilder.Nodes;
 using GeoTetra.GTLogicGraph;
-using GeoTetra.GTLogicGraph.Slots;
+using GeoTetra.GTLogicGraph.Ports;
 using UnityEngine;
 
 namespace GeoTetra.GTBuilderGraph

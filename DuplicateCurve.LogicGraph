@@ -14,7 +14,7 @@
     "_serializedNodes": [
         {
             "NodeType": "CurveDuplicateLogicNode",
-            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-212.8792724609375,\"y\":438.583984375,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"c808513c-e0ba-47fa-973f-9d98e429ac34\",\"_globalOffset\":{\"x\":0.0,\"y\":4.0,\"z\":0.0}}"
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-212.8792724609375,\"y\":438.583984375,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"c808513c-e0ba-47fa-973f-9d98e429ac34\",\"_globalOffset\":{\"x\":0.0,\"y\":2.0,\"z\":0.0}}"
         }
     ],
     "_serializedEdges": [

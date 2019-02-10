@@ -1,5 +1,5 @@
 ﻿using GeoTetra.GTLogicGraph;
-using GeoTetra.GTLogicGraph.Slots;
+using GeoTetra.GTLogicGraph.Ports;
 
 namespace GeoTetra.GTBuilderGraph
 {

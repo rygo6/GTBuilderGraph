@@ -2,15 +2,15 @@
     "_serializedInputNodes": [
         {
             "NodeType": "CurveInputLogicNode",
-            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-590.5,\"y\":255.0,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"5d967803-c0de-455f-b496-b25175112442\"}"
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-581.5,\"y\":186.0,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"5d967803-c0de-455f-b496-b25175112442\"}"
         },
         {
             "NodeType": "CurveInputLogicNode",
-            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-594.5,\"y\":433.0,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"73aef49a-f955-42f2-9e9d-e3fce7836225\"}"
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-582.5,\"y\":286.0,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"73aef49a-f955-42f2-9e9d-e3fce7836225\"}"
         },
         {
             "NodeType": "CurveInputLogicNode",
-            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-603.5,\"y\":619.0,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"eef98eac-89a1-48a0-84f6-eb3ad00d5617\"}"
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-591.5,\"y\":524.0,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"eef98eac-89a1-48a0-84f6-eb3ad00d5617\"}"
         }
     ],
     "_serializedOutputNodes": [

@@ -22,7 +22,12 @@ namespace GeoTetra.GTBuilderGraph
         
         [LogicNodePort]
         public event Action<CurvePrimitive> CurvePrimitiveOutput;
-       
+
+        public Vector3 GlobalOffset
+        {
+            get { return _globalOffset; }
+        }
+
         [LogicNodePort]
         public void CurvePrimitiveInput(CurvePrimitive value)
         {
@@ -59,9 +64,9 @@ namespace GeoTetra.GTBuilderGraph
             for (int i = 0; i < _primitive.Handles.Count; ++i)
             {
                 _duplicatePrimitive.Handles[i] = new CurveHandle(
-                    _primitive.Handles[i].Position + _offsets[i].Position + _globalOffset,
-                    _primitive.Handles[i].RightHandlePosition + _offsets[i].RightHandlePosition + _globalOffset,
-                    _primitive.Handles[i].LeftHandlePosition + _offsets[i].LeftHandlePosition + _globalOffset);
+                    _primitive.Handles[i].Position + _offsets[i].Position + GlobalOffset,
+                    _primitive.Handles[i].RightHandlePosition + _offsets[i].RightHandlePosition + GlobalOffset,
+                    _primitive.Handles[i].LeftHandlePosition + _offsets[i].LeftHandlePosition + GlobalOffset);
             }
         }
 

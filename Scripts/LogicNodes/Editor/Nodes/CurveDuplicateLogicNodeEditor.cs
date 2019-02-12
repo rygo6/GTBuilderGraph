@@ -12,14 +12,17 @@ namespace GeoTetra.GTBuilderGraph
         [SerializeField]
         private Vector3 _globalOffset;
         
+        static readonly string[] Labels = {"X", "Y", "Z"};
+        
         public override void ConstructNode()
         {
             AddPort(new CurvePrimitivePortDescription(this, "CurvePrimitiveInput", "In", PortDirection.Input));
-            AddPort(new Vector3PortDescription(
+            AddPort(new VectorPortDescription(
                 this, 
                 "GlobalOffset", 
                 "Global Offset", 
                 PortDirection.Input,
+                Labels,
                 () => _globalOffset,
                 (newValue) => _globalOffset = newValue));
             AddPort(new CurvePrimitivePortDescription(this, "CurvePrimitiveOutput", "Out", PortDirection.Output));

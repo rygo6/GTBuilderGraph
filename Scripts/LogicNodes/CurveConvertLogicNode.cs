@@ -21,10 +21,15 @@ namespace GeoTetra.GTBuilderGraph
         private CurvePrimitive _upPrimitive;
         private readonly List<Vertex> _vertices = new List<Vertex>();
 
+        public float Spacing
+        {
+            get { return _spacing; }
+        }
+
         [LogicNodePort]
         public void CurvePrimitiveInput(CurvePrimitive primitive)
         {
-            Debug.Log($"SPACING {_spacing}");
+            Debug.Log($"SPACING {Spacing}");
             _primitive = primitive;
             Process();
         }
@@ -95,11 +100,11 @@ namespace GeoTetra.GTBuilderGraph
                         _upPrimitive.Handles[startIndex].LeftHandlePosition,
                         _upPrimitive.Handles[endIndex].RightHandlePosition,
                         _upPrimitive.Handles[endIndex].Position);
-                    start = segment.EquiDistancePoints(start, _spacing, _vertices, upSegment, i == length - 1);
+                    start = segment.EquiDistancePoints(start, Spacing, _vertices, upSegment, i == length - 1);
                 }
                 else
                 {
-                    start = segment.EquiDistancePoints(start, _spacing, _vertices, i == length - 1);
+                    start = segment.EquiDistancePoints(start, Spacing, _vertices, i == length - 1);
                 }
             }
         }

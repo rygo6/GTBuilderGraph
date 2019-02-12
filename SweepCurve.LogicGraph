@@ -11,12 +11,20 @@
         {
             "NodeType": "CurveInputLogicNode",
             "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-591.5,\"y\":524.0,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"eef98eac-89a1-48a0-84f6-eb3ad00d5617\"}"
+        },
+        {
+            "NodeType": "Vector1InputLogicNode",
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":401.54888916015627,\"y\":889.1326904296875,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"4c90eb13-0afb-4eb3-967a-31bab0b9d408\"}"
         }
     ],
     "_serializedOutputNodes": [
         {
             "NodeType": "MeshOutputLogicNode",
             "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":798.4052734375,\"y\":402.6297607421875,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"2131577e-1d4b-4c83-947b-30fa6270a1d3\"}"
+        },
+        {
+            "NodeType": "Vector1OutputLogicNode",
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":771.6144409179688,\"y\":761.6979370117188,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"07791b52-bad5-4839-ac32-424396075979\"}"
         }
     ],
     "_serializedNodes": [
@@ -69,6 +77,12 @@
             "SourceMemberName": "MeshOutput",
             "TargetNodeGuid": "2131577e-1d4b-4c83-947b-30fa6270a1d3",
             "TargetMemberName": "MeshInput"
+        },
+        {
+            "SourceNodeGuid": "4c90eb13-0afb-4eb3-967a-31bab0b9d408",
+            "SourceMemberName": "Vector1Output",
+            "TargetNodeGuid": "07791b52-bad5-4839-ac32-424396075979",
+            "TargetMemberName": "Vector1Input"
         }
     ]
 }

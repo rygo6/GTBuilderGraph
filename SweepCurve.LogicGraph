@@ -10,11 +10,11 @@
         },
         {
             "NodeType": "CurveInputLogicNode",
-            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-591.5,\"y\":524.0,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"eef98eac-89a1-48a0-84f6-eb3ad00d5617\"}"
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-580.3736572265625,\"y\":587.4210815429688,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"eef98eac-89a1-48a0-84f6-eb3ad00d5617\"}"
         },
         {
             "NodeType": "Vector1InputLogicNode",
-            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":401.54888916015627,\"y\":889.1326904296875,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"4c90eb13-0afb-4eb3-967a-31bab0b9d408\"}"
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":392.3489074707031,\"y\":856.9327392578125,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"4c90eb13-0afb-4eb3-967a-31bab0b9d408\"}"
         }
     ],
     "_serializedOutputNodes": [

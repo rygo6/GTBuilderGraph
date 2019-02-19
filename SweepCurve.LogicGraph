@@ -30,15 +30,15 @@
     "_serializedNodes": [
         {
             "NodeType": "CurveConvertLogicNode",
-            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-120.5,\"y\":310.0,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"389b8d58-6784-4bb0-94df-e6040859baf1\",\"_spacing\":0.4000000059604645}"
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-109.06664276123047,\"y\":214.2086944580078,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"389b8d58-6784-4bb0-94df-e6040859baf1\",\"_spacing\":0.4000000059604645}"
         },
         {
             "NodeType": "CurveConvertLogicNode",
-            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-116.90604400634766,\"y\":586.6399536132813,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"17a61466-6d4d-4686-9b45-9d9c2630f462\",\"_spacing\":1.0}"
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-96.11799621582031,\"y\":470.2267761230469,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"17a61466-6d4d-4686-9b45-9d9c2630f462\",\"_spacing\":1.0}"
         },
         {
             "NodeType": "CurveSweepLogicNode",
-            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":330.7928771972656,\"y\":365.5922546386719,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"3baf6b39-538e-44ab-b31a-178856215572\",\"_flipNormals\":true,\"_center\":1,\"_compressUV\":{\"X\":false,\"Y\":false},\"_compressUV2\":{\"X\":false,\"Y\":false}}"
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":366.1324157714844,\"y\":446.66558837890627,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"3baf6b39-538e-44ab-b31a-178856215572\",\"_flipNormals\":true,\"_center\":1,\"_compressUV\":{\"X\":false,\"Y\":true},\"_compressUV2\":{\"X\":false,\"Y\":false}}"
         }
     ],
     "_serializedEdges": [

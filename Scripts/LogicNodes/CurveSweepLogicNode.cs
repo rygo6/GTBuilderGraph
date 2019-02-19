@@ -30,15 +30,35 @@ namespace GeoTetra.GTBuilder
 
         private MeshGroup _meshGroup = new MeshGroup();
 
+        public void FlipNormals(bool value)
+        {
+            _flipNormals = value;
+        }
+
+        public void Center(Center value)
+        {
+            _center = value;
+        }
+
+        public void CompressUv(Bool2 value)
+        {
+            _compressUV = value;
+        }
+
+        public void CompressUv2(Bool2 value)
+        {
+            _compressUV2 = value;
+        }
+
         [LogicNodePort]
         public void RailVerticesInput(List<Vertex> vertexList)
         {
             _railPoints = vertexList;
-            if (_center == Center.Local)
+            if (_center == GTBuilder.Center.Local)
             {
                 _railCenter = VerticesCenter(_railPoints);
             }
-            else if (_center == Center.Origin)
+            else if (_center == GTBuilder.Center.Origin)
             {
                 _railCenter = Vector3.zero;
             }

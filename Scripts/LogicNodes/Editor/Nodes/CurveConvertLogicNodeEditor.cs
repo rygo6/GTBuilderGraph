@@ -7,22 +7,22 @@ namespace GeoTetra.GTBuilderGraph
 {
     [Title("Curve", "Convert")]
     [NodeEditorType(typeof(CurveConvertLogicNode))]
-    public class CurveConvertLogicNodeEditor : LogicNodeEditor
+    public class CurveConvertLogicNodeEditor : AbstractLogicNodeEditor
     {
         [SerializeField] private float _spacing = 1;
 
-        static readonly string[] Labels = {"X"};
+        private static readonly string[] Labels = {"X"};
 
         public override void ConstructNode()
         {
-            AddPort(new CurvePrimitivePortDescription(this, "CurvePrimitiveInput", "In", PortDirection.Input));
-            AddPort(new CurvePrimitivePortDescription(this, "UpCurvePrimitiveInput", "Up In", PortDirection.Input));
-            AddPort(new VertexListPortDescription(this, "VertexListOutput", "Out", PortDirection.Output));
-            AddPort(new VectorPortDescription(
+            AddSlot(new CurvePrimitiveLogicSlot(this, "CurvePrimitiveInput", "In", SlotDirection.Input));
+            AddSlot(new CurvePrimitiveLogicSlot(this, "UpCurvePrimitiveInput", "Up In", SlotDirection.Input));
+            AddSlot(new VertexListSlot(this, "VertexListOutput", "Out", SlotDirection.Output));
+            AddSlot(new VectorLogicSlot(
                 this,
                 "Spacing",
                 "Spacing",
-                PortDirection.Input,
+                SlotDirection.Input,
                 Labels,
                 () => new Vector4(_spacing, 0, 0, 0),
                 (newValue) => _spacing = newValue.x));

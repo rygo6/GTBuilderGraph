@@ -8,7 +8,7 @@ namespace GeoTetra.GTBuilderGraph
 {
     [Title("Curve", "Sweep")]
     [NodeEditorType(typeof(CurveSweepLogicNode))]
-    public class CurveSweepLogicNodeEditor : LogicNodeEditor
+    public class CurveSweepLogicNodeEditor : AbstractLogicNodeEditor
     {        
         [SerializeField]
         private bool _flipNormals;
@@ -21,17 +21,10 @@ namespace GeoTetra.GTBuilderGraph
 
         [SerializeField]
         private Bool2 _compressUV2;
+
+        private static readonly string[] LabelsFlip = {"on"};
         
-        [NodeToggleControl("Flip Normals")]
-        public bool FlipNormals
-        {
-            get => _flipNormals;
-            set
-            {
-                _flipNormals = value;
-                SetDirty();
-            }
-        }
+        private static readonly string[] LabelsUV = {"U", "V"};
         
         [EnumControl("Rail Center")]
         public Center RailCenter
@@ -44,55 +37,36 @@ namespace GeoTetra.GTBuilderGraph
             }
         }
 
-        [NodeToggleControl("Compress U")]
-        public bool CompressU
-        {
-            get => _compressUV.X;
-            set
-            {
-                _compressUV.X = value;
-                SetDirty();
-            }
-        }
-        
-        [NodeToggleControl("Compress V")]
-        public bool CompressV
-        {
-            get => _compressUV.Y;
-            set
-            {
-                _compressUV.Y = value;
-                SetDirty();
-            }
-        }
-        
-        [NodeToggleControl("Compress U2")]
-        public bool CompressU2
-        {
-            get => _compressUV2.X;
-            set
-            {
-                _compressUV2.X = value;
-                SetDirty();
-            }
-        }
-        
-        [NodeToggleControl("Compress V2")]
-        public bool CompressV2
-        {
-            get => _compressUV2.Y;
-            set
-            {
-                _compressUV2.Y = value;
-                SetDirty();
-            }
-        }
-        
         public override void ConstructNode()
         {
-            AddPort(new VertexListPortDescription(this, "PathVerticesInput", "In Path", PortDirection.Input));
-            AddPort(new VertexListPortDescription(this, "RailVerticesInput", "In Rail", PortDirection.Input));
-            AddPort(new MeshPortDescription(this, "MeshOutput", "Out", PortDirection.Output));
+            AddSlot(new VertexListSlot(this, "PathVerticesInput", "In Path", SlotDirection.Input));
+            AddSlot(new VertexListSlot(this, "RailVerticesInput", "In Rail", SlotDirection.Input));
+            
+            AddSlot(new BooleanSlot(this, 
+                "FlipNormals", 
+                "Flip Normals", 
+                SlotDirection.Input,
+                LabelsFlip,
+                () =>  new Bool4(_flipNormals, false, false, false),
+                (v) => _flipNormals = v.X));
+            
+            AddSlot(new BooleanSlot(this, 
+                "CompressUV", 
+                "Compress UV", 
+                SlotDirection.Input,
+                LabelsUV,
+                () =>  new Bool4(_compressUV.X, _compressUV.Y, false, false),
+                (v) => _compressUV = v));
+            
+            AddSlot(new BooleanSlot(this, 
+                "CompressUV2", 
+                "Compress UV2", 
+                SlotDirection.Input,
+                LabelsUV,
+                () =>  new Bool4(_compressUV2.X, _compressUV2.Y, false, false),
+                (v) => _compressUV2 = v));
+            
+            AddSlot(new MeshSlot(this, "MeshOutput", "Out", SlotDirection.Output));
         }
     }
 }

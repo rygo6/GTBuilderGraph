@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using GeoTetra.GTBuilder.Events;
 using GeoTetra.Common.Extensions;
+using GeoTetra.GTCommon;
 
 namespace GeoTetra.GTBuilder.Nodes
 {

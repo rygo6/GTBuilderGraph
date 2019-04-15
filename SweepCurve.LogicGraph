@@ -2,11 +2,11 @@
     "_serializedInputNodes": [
         {
             "NodeType": "CurveInputLogicNode",
-            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-581.5,\"y\":186.0,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"5d967803-c0de-455f-b496-b25175112442\"}"
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-771.7103881835938,\"y\":139.2268829345703,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"5d967803-c0de-455f-b496-b25175112442\"}"
         },
         {
             "NodeType": "CurveInputLogicNode",
-            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-582.5,\"y\":286.0,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"73aef49a-f955-42f2-9e9d-e3fce7836225\"}"
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-768.5525512695313,\"y\":269.36956787109377,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"73aef49a-f955-42f2-9e9d-e3fce7836225\"}"
         },
         {
             "NodeType": "CurveInputLogicNode",
@@ -14,31 +14,31 @@
         },
         {
             "NodeType": "Vector1InputLogicNode",
-            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":392.3489074707031,\"y\":856.9327392578125,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"4c90eb13-0afb-4eb3-967a-31bab0b9d408\"}"
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-408.4642639160156,\"y\":429.4498291015625,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"71c1145b-1b8d-41ea-89c6-22c47b36ece1\"}"
         }
     ],
     "_serializedOutputNodes": [
         {
             "NodeType": "MeshOutputLogicNode",
-            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":798.4052734375,\"y\":402.6297607421875,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"2131577e-1d4b-4c83-947b-30fa6270a1d3\"}"
-        },
-        {
-            "NodeType": "Vector1OutputLogicNode",
-            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":771.6144409179688,\"y\":761.6979370117188,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"07791b52-bad5-4839-ac32-424396075979\"}"
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":796.4052734375,\"y\":500.6297607421875,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"2131577e-1d4b-4c83-947b-30fa6270a1d3\"}"
         }
     ],
     "_serializedNodes": [
         {
             "NodeType": "CurveConvertLogicNode",
-            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-109.06664276123047,\"y\":214.2086944580078,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"389b8d58-6784-4bb0-94df-e6040859baf1\",\"_spacing\":0.4000000059604645}"
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-360.28948974609377,\"y\":195.51304626464845,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"389b8d58-6784-4bb0-94df-e6040859baf1\",\"_spacing\":0.4000000059604645}"
         },
         {
             "NodeType": "CurveConvertLogicNode",
-            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-96.11799621582031,\"y\":470.2267761230469,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"17a61466-6d4d-4686-9b45-9d9c2630f462\",\"_spacing\":1.0}"
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-140.96800231933595,\"y\":530.0267944335938,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"17a61466-6d4d-4686-9b45-9d9c2630f462\",\"_spacing\":1.0}"
         },
         {
             "NodeType": "CurveSweepLogicNode",
-            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":366.1324157714844,\"y\":446.66558837890627,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"3baf6b39-538e-44ab-b31a-178856215572\",\"_flipNormals\":true,\"_center\":1,\"_compressUV\":{\"X\":false,\"Y\":true},\"_compressUV2\":{\"X\":false,\"Y\":false}}"
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":394.1324157714844,\"y\":500.66558837890627,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"3baf6b39-538e-44ab-b31a-178856215572\",\"_flipNormals\":true,\"_center\":1,\"_compressUV\":{\"X\":false,\"Y\":true},\"_compressUV2\":{\"X\":false,\"Y\":false}}"
+        },
+        {
+            "NodeType": "CurveRefineLogicNode",
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-14.438274383544922,\"y\":323.90716552734377,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"80fb0e67-d4d1-4889-ae35-29a985c6baf1\",\"_angleThreshold\":1.0}"
         }
     ],
     "_serializedEdges": [
@@ -61,12 +61,6 @@
             "TargetMemberName": "CurvePrimitiveInput"
         },
         {
-            "SourceNodeGuid": "389b8d58-6784-4bb0-94df-e6040859baf1",
-            "SourceMemberName": "VertexListOutput",
-            "TargetNodeGuid": "3baf6b39-538e-44ab-b31a-178856215572",
-            "TargetMemberName": "PathVerticesInput"
-        },
-        {
             "SourceNodeGuid": "17a61466-6d4d-4686-9b45-9d9c2630f462",
             "SourceMemberName": "VertexListOutput",
             "TargetNodeGuid": "3baf6b39-538e-44ab-b31a-178856215572",
@@ -79,10 +73,22 @@
             "TargetMemberName": "MeshInput"
         },
         {
-            "SourceNodeGuid": "4c90eb13-0afb-4eb3-967a-31bab0b9d408",
+            "SourceNodeGuid": "389b8d58-6784-4bb0-94df-e6040859baf1",
+            "SourceMemberName": "VertexListOutput",
+            "TargetNodeGuid": "80fb0e67-d4d1-4889-ae35-29a985c6baf1",
+            "TargetMemberName": "VertexListInput"
+        },
+        {
+            "SourceNodeGuid": "80fb0e67-d4d1-4889-ae35-29a985c6baf1",
+            "SourceMemberName": "VertexListOutput",
+            "TargetNodeGuid": "3baf6b39-538e-44ab-b31a-178856215572",
+            "TargetMemberName": "PathVerticesInput"
+        },
+        {
+            "SourceNodeGuid": "71c1145b-1b8d-41ea-89c6-22c47b36ece1",
             "SourceMemberName": "Vector1Output",
-            "TargetNodeGuid": "07791b52-bad5-4839-ac32-424396075979",
-            "TargetMemberName": "Vector1Input"
+            "TargetNodeGuid": "80fb0e67-d4d1-4889-ae35-29a985c6baf1",
+            "TargetMemberName": "AngleThresholdInput"
         }
     ]
 }

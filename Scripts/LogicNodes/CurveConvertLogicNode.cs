@@ -8,26 +8,24 @@ using GeoTetra.GTLogicGraph;
 using UnityEditor.Experimental.UIElements.GraphView;
 using UnityEngine;
 
-namespace GeoTetra.GTBuilderGraph
+namespace GeoTetra.GTBuilder
 {
     public class CurveConvertLogicNode : LogicNode
     {
         [SerializeField] 
         private float _spacing;
 
-        [LogicNodePort] public event Action<List<Vertex>> VertexListOutput;
+        public event Action<List<Vertex>> VertexListOutput;
 
         private CurvePrimitive _primitive;
         private CurvePrimitive _upPrimitive;
         private readonly List<Vertex> _vertices = new List<Vertex>();
 
-        [LogicNodePort]
-        public void Spacing(float value)
+        public void SpacingInput(float value)
         {
             _spacing = value;
         }
 
-        [LogicNodePort]
         public void CurvePrimitiveInput(CurvePrimitive primitive)
         {
             Debug.Log($"SPACING {_spacing}");
@@ -35,7 +33,6 @@ namespace GeoTetra.GTBuilderGraph
             Process();
         }
 
-        [LogicNodePort]
         public void UpCurvePrimitiveInput(CurvePrimitive primitive)
         {
             _upPrimitive = primitive;

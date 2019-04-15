@@ -21,7 +21,7 @@ namespace GeoTetra.GTBuilder
 
         public event Action<MeshGroup> MeshGroupOutput;
         
-        [LogicNodePort] public event Action<Mesh> MeshOutput;
+        public event Action<Mesh> MeshOutput;
 
         private List<Vertex> _railPoints;
 
@@ -51,9 +51,9 @@ namespace GeoTetra.GTBuilder
             _compressUV2 = value;
         }
 
-        [LogicNodePort]
         public void RailVerticesInput(List<Vertex> vertexList)
         {
+            Debug.Log("RailVerticesInput");
             _railPoints = vertexList;
             if (_center == GTBuilder.Center.Local)
             {
@@ -67,16 +67,16 @@ namespace GeoTetra.GTBuilder
             GenerateMesh();
         }
 
-        [LogicNodePort]
         public void PathVertexGroupsInput(List<VertexGroup> groupList)
         {
+            Debug.Log("PathVertexGroupsInput");
             _pathVertexGroups = groupList;
             GenerateMesh();
         }
 
-        [LogicNodePort]
         public void PathVerticesInput(List<Vertex> vertexList)
         {
+            Debug.Log("PathVerticesInput");
             //if setting PathPoints directly override PathVertexGroups
             _pathVertexGroups = new List<VertexGroup>();
             _pathVertexGroups.Add(new VertexGroup(vertexList));

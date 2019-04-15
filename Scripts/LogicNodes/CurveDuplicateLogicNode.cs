@@ -20,7 +20,6 @@ namespace GeoTetra.GTBuilderGraph
 
         private readonly List<CurveHandle> _offsets = new List<CurveHandle>();
         
-        [LogicNodePort]
         public event Action<CurvePrimitive> CurvePrimitiveOutput;
 
         public Vector3 GlobalOffset
@@ -28,7 +27,6 @@ namespace GeoTetra.GTBuilderGraph
             get { return _globalOffset; }
         }
 
-        [LogicNodePort]
         public void CurvePrimitiveInput(CurvePrimitive value)
         {
             _primitive = value;

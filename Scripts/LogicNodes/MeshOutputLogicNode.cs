@@ -9,7 +9,6 @@ namespace GeoTetra.GTBuilderGraph
         [Output]
         public event Action<Mesh> MeshOutput;
        
-        [LogicNodePort]
         public void MeshInput(Mesh value)
         {
             Debug.Log("MeshOutputLogicNode MeshInput " + value);

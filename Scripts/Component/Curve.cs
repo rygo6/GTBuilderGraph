@@ -10,7 +10,7 @@ namespace GeoTetra.GTBuilder.Component
     [ExecuteInEditMode]
     public class Curve : MonoBehaviour, IInputComponent
     {
-        public event Action<IInputComponent> Changed;
+        public event Action<IInputComponent, long> Changed;
 
         [SerializeField] private CurvePrimitive _curvePrimitive;
 
@@ -22,7 +22,7 @@ namespace GeoTetra.GTBuilder.Component
         public void OnChange()
         {
 //            Debug.Log("OnChange Curve");
-            Changed?.Invoke(this);
+            Changed?.Invoke(this, System.DateTime.Now.Ticks);
         }
 
         public void SetCurvePrimitive(ObjectEvent value)

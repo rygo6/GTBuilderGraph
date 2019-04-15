@@ -1,4 +1,5 @@
-﻿using GeoTetra.GTBuilder.Nodes;
+﻿using GeoTetra.GTBuilder;
+using GeoTetra.GTBuilder.Nodes;
 using GeoTetra.GTLogicGraph;
 using GeoTetra.GTLogicGraph.Ports;
 using UnityEngine;
@@ -15,12 +16,12 @@ namespace GeoTetra.GTBuilderGraph
 
         public override void ConstructNode()
         {
-            AddSlot(new CurvePrimitiveLogicSlot(this, "CurvePrimitiveInput", "In", SlotDirection.Input));
-            AddSlot(new CurvePrimitiveLogicSlot(this, "UpCurvePrimitiveInput", "Up In", SlotDirection.Input));
-            AddSlot(new VertexListSlot(this, "VertexListOutput", "Out", SlotDirection.Output));
+            AddSlot(new CurvePrimitiveLogicSlot(this, nameof(CurveConvertLogicNode.CurvePrimitiveInput), "In", SlotDirection.Input));
+            AddSlot(new CurvePrimitiveLogicSlot(this, nameof(CurveConvertLogicNode.UpCurvePrimitiveInput), "Up In", SlotDirection.Input));
+            AddSlot(new VertexListSlot(this, nameof(CurveConvertLogicNode.VertexListOutput), "Out", SlotDirection.Output));
             AddSlot(new VectorLogicSlot(
                 this,
-                "Spacing",
+                 nameof(CurveConvertLogicNode.SpacingInput),
                 "Spacing",
                 SlotDirection.Input,
                 Labels,

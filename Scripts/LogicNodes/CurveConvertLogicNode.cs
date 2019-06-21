@@ -23,7 +23,7 @@ namespace GeoTetra.GTBuilder
 
         public void SpacingInput(float value)
         {
-            _spacing = value;
+            _spacing = Mathf.Clamp( value, .01f, float.MaxValue);
         }
 
         public void CurvePrimitiveInput(CurvePrimitive primitive)

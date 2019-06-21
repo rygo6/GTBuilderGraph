@@ -15,6 +15,10 @@
         {
             "NodeType": "Vector1InputLogicNode",
             "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-408.4642639160156,\"y\":429.4498291015625,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"71c1145b-1b8d-41ea-89c6-22c47b36ece1\"}"
+        },
+        {
+            "NodeType": "Vector1InputLogicNode",
+            "JSON": "{\"_displayName\":\"\",\"_position\":{\"x\":-769.0,\"y\":383.0,\"z\":0.0},\"_expanded\":true,\"_nodeGuid\":\"834f5e12-952e-420e-b445-3da2c53a5e0c\"}"
         }
     ],
     "_serializedOutputNodes": [
@@ -89,6 +93,12 @@
             "SourceMemberName": "Vector1Output",
             "TargetNodeGuid": "80fb0e67-d4d1-4889-ae35-29a985c6baf1",
             "TargetMemberName": "AngleThresholdInput"
+        },
+        {
+            "SourceNodeGuid": "834f5e12-952e-420e-b445-3da2c53a5e0c",
+            "SourceMemberName": "Vector1Output",
+            "TargetNodeGuid": "389b8d58-6784-4bb0-94df-e6040859baf1",
+            "TargetMemberName": "SpacingInput"
         }
     ]
 }

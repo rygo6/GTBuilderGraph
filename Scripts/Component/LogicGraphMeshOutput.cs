@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using GeoTetra.Common.UnityEvents;
+using GeoTetra.GTCommon.UnityEvents;
 using GeoTetra.GTLogicGraph;
 using UnityEngine;
 

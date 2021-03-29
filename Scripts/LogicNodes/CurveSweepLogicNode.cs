@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using GeoTetra.GTBuilder.Events;
-using GeoTetra.Common.Extensions;
+using GeoTetra.GTCommon.Extensions;
 using GeoTetra.GTCommon;
 using GeoTetra.GTLogicGraph;
 
